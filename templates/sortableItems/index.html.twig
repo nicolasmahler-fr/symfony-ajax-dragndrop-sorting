@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Sort items position with AJAX{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 2em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    ul{
+        padding: 0;
+        list-style: none;
+    }
+    li{
+        padding: 1em;
+        background: #fff;
+        margin: 0.2em 0;
+    }
+
+    li span{
+        font-size: 10px;
+        color: #666;
+    }
+</style>
+
+<div class="example-wrapper">
+<h1>Drag'n'drop items to reorder</h1>
+<ul id="js-sort">
+    {% for item in items %}
+        <li data-id="{{item.id}}">
+            {{item.name}} <span>{{item.position}}</span>
+        </li>
+    {% endfor %}
+</ul>
+</div>
+{% endblock %}
