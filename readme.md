@@ -44,7 +44,8 @@ _Fields :_
 `composer require --dev orm-fixtures`
 
 **src/DataFixtures/AppFixtures.php :**
-Create a loop of 10 items, with unique name (ie : item-1, item-2 ... item-10) and set each a unique position (1 -> 10).
+Create a loop of 10 items, with unique name (ie : item-1, item-2 ... item-10) and set each a unique position (0 -> 9).
+**IMPORTANT:** Ensure the positions are set from 0!
 
 #### Load Fixtures
 
@@ -194,7 +195,7 @@ stof_doctrine_extensions:
 **src/Entity/Item.php**
 
 ```
-use Gedmo\SortablePosition;
+use Gedmo\Mapping\Annotation\SortablePosition;
 use Doctrine\DBAL\Types\Types;
 ...
 #[SortablePosition]
