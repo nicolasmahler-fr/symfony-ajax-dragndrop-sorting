@@ -2,10 +2,10 @@
 
 namespace App\Entity;
 
-use Gedmo\SortablePosition;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\SortableItemsRepository;
+use Gedmo\Mapping\Annotation\SortablePosition;
 
 #[ORM\Entity(repositoryClass: SortableItemsRepository::class)]
 class Item

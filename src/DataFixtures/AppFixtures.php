@@ -10,7 +10,7 @@ class AppFixtures extends Fixture
 {
     public function load(ObjectManager $manager): void
     {
-        for($i = 1; $i <= 10; $i++) {
+        for($i = 0; $i <= 10; $i++) {
             $item = new Item();
             $item->setName("item" . $i)
                 ->setPosition($i);
