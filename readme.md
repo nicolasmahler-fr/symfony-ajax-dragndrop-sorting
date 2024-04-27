@@ -9,6 +9,8 @@
 - Doctrine fixtures bundle (_optional_)
 - Doctrine stof/doctrine-extensions-bundle
 - Webpack Encore
+- JQuery
+- JQueryUI (1.13.0)
 
 ## Steps
 
